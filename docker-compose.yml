@@ -1,0 +1,13 @@
+version: '3'
+services:
+  http:
+    image: mheers/http-server
+    build: .
+    environment:
+      - WORKDIR=/var/www
+      - USERNAME=alice
+      - PASSWORD=secret
+    volumes:
+      - ./data:/var/www
+    # ports:
+    #   - "8333:8333"
